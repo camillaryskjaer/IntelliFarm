@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nytestb1"
+    tools:context=".SensorActivity">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <dk.camr.smartfarm2.view.FontAwesome
+                android:id="@+id/sensorIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="&#xf769;"
+                android:textAlignment="center"
+                android:textSize="@dimen/abc_text_size_large_material" />
+
+            <TextView
+                android:id="@+id/sensorType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:text="Boks 15"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <dk.camr.smartfarm2.view.FontAwesome
+                android:id="@+id/statusIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="&#xf111;"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/abc_text_size_large_material" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Aktiv"
+                android:theme="@style/SCBSwitch"  />
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/operational"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Automatisk styring"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="132dp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+
+            android:layout_margin="20dp"
+            android:padding="20dp" />
+
+        <!--<org.eazegraph.lib.charts.ValueLineChart
+            android:id="@+id/cubiclinechart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:egCurveSmoothness="0.4"
+            app:egIndicatorLineColor="#FE6DA8"
+            app:egLegendColor="@color/white"
+            app:egLegendHeight="40dp"
+            app:egShowStandardValue="true"
+            app:egUseCubic="true"
+            app:egUseOverlapFill="true">
+
+        </org.eazegraph.lib.charts.ValueLineChart>-->
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
